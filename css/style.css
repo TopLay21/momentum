@@ -12,6 +12,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* 배경 이미지 고정 설정 */
 }
 
 /* 배경 이미지 추가 */
@@ -34,6 +35,17 @@ body {
   color: white; /* 폰트 색상을 흰색으로 설정 */
   font-size: 16px; /* 폰트 크기 설정 (예: 24px) */
   font-family: Arial, sans-serif; /* 폰트 패밀리 설정 (예: Arial) */
+}
+
+#quote-text {
+  line-height: 1.2; /* quote 텍스트의 줄 간격 설정 */
+  font-size: 24px; /* quote 텍스트의 글꼴 크기 설정 (선택 사항) */
+  font-weight: bold; /* quote 텍스트의 글꼴 두께 설정 (선택 사항) */
+}
+
+#quote-author {
+  line-height: 1.2; /* author 텍스트의 줄 간격 설정 */
+  font-size: 18px; /* author 텍스트의 글꼴 크기 설정 (선택 사항) */
 }
 
 #clock {
