@@ -183,5 +183,5 @@ label {
 }
 
 #todo-list li {
-  overflow-wrap: break-word; /* 글자가 요소의 경계를 넘어갈 때 줄 바꿈 수행 */
+  word-break: break-all; /* 글자가 요소의 경계를 넘어갈 때 줄 바꿈 수행 */
 }
