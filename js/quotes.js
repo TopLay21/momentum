@@ -45,11 +45,9 @@ const quotes = [
     }
 ]
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
-//round: 소수점을 반올림해주는 명령어
-//ceil: 소수점을 올림해주는 명령어
-//floor: 소수점을 내림해주는 명령어
+const quoteText = document.getElementById("quote-text");
+const quoteAuthor = document.getElementById("quote-author");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+
+quoteText.innerText = todaysQuote.quote;
+quoteAuthor.innerText = `- ${todaysQuote.author} - `;
