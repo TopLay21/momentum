@@ -161,3 +161,11 @@ label {
 #todo-list button {
   font-size: 22px; /* 아이콘 크기 조절 (원하는 크기로 조절) */
 }
+
+#todo-list li{
+  color:  #333;
+}
+
+#todo-list label{
+  color: #333;
+}
