@@ -157,3 +157,7 @@ label {
   font-size: 19px;
   font-family: Arial, sans-serif;
 }
+
+#todo-list button {
+  font-size: 28px; /* 아이콘 크기 조절 (원하는 크기로 조절) */
+}
