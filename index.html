@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
+    <title>Hello! From HTML!</title>
+  </head>
+  <body>
+    <form class="hidden" id="login-form">
+      <input 
+      required 
+      maxlength="15"
+      type="text" 
+      placeholder="What is your name?"
+      >
+      <button>Log In</button>
+    </form>
+    <h2 id="clock">00:00:00</h2>
+    <h1 id="greeting" class="hidden"></h1>
+    <div class="todo-container">
+      <div class="todo-form">
+        <form id="todo-form">
+          <label for="todo-input">todo: </label>
+          <input type="text" placeholder="Write a To Do and Press Enter" required>
+        </form>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+    <div id="quote">
+      <span></span><br>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="js/greetings.js" charset="utf-8"></script>
+    <script src="js/clock.js" charset="utf-8"></script>
+    <script src="js/quotes.js" charset="utf-ß"></script>
+    <script src="js/background.js" charset="utf-8"></script>
+    <script src="js/todo.js" charset="utf-8"></script>
+    <script src="js/weather.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+.hidden{
+  display: none;
+}
+
+html, body {
+  margin: 0; /* 바깥 여백 제거 */
+  padding: 0; /* 안쪽 여백 제거 */
+  height: 100%; /* 화면 높이를 100%로 설정 */
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 배경 이미지 추가 */
+body {
+  background-image: url('img/0.jpg');
+  background-image: url('img/1.jpg');
+  background-image: url('img/2.jpg');
+  background-image: url('img/3.jpg');
+  background-image: url('img/4.jpg');
+  background-image: url('img/5.jpg');
+}
+
+#quote {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* 요소를 가로로 중앙 정렬 */
+  text-align: center; /* 내부 텍스트를 가운데 정렬 */
+  font-weight: bold; /* 폰트 두껍게 설정 */
+  color: white; /* 폰트 색상을 흰색으로 설정 */
+  font-size: 16px; /* 폰트 크기 설정 (예: 24px) */
+  font-family: Arial, sans-serif; /* 폰트 패밀리 설정 (예: Arial) */
+}
+
+#clock {
+  position: absolute;
+  top: 35%; /* clock을 약간 위로 조정 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+}
+
+#greeting {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+#weather {
+  position: absolute;
+  top: 20px; /* 원하는 위치로 조절 */
+  right: 20px; /* 원하는 위치로 조절 */
+  text-align: right;
+  font-size: 16px; /* 폰트 크기 설정 (원하는 크기로 조절) */
+  font-weight: bold; /* 폰트 두껍게 설정 */
+  color: white /* 폰트 색상 설정 (원하는 색상으로 조절) */
+}
+
+#weather span {
+  display: block; /* 블록 레벨 요소로 표시하여 아래로 배치 */
+  margin-bottom: 5px; /* 각 요소 간의 간격 설정 (원하는 여백으로 조절) */
+  gap: 20px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 왼쪽 정렬 */
+  width: 300px; /* 원하는 너비로 조절 */
+  margin: 20px; /* 외부 여백 설정 (원하는 여백으로 조절) */
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+}
+
+#todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+#todo-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: red;
+}
+
+input[type="text"] {
+  border: none; /* 테두리 제거 */
+  border-bottom: 2px solid #000; /* 굵은 선 스타일 설정 */
+  background-color: transparent; /* 배경 투명으로 설정 */
+  padding: 8px; /* 내부 여백 설정 */
+  font-size: 16px; /* 폰트 크기 설정 */
+  color: #333; /* 텍스트 색상 설정 */
+}
+
+input[type="text"]:focus {
+  outline: none; /* 포커스 시 아웃라인 제거 */
+  border-bottom-color: #007bff;
+}
+
+label {
+  font-size: 19px;
+  font-family: Arial, sans-serif;
+}
