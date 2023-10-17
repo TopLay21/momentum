@@ -13,6 +13,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* 배경 이미지 고정 설정 */
+  overflow: hidden;
 }
 
 /* 배경 이미지 추가 */
