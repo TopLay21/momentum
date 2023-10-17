@@ -68,6 +68,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   color: white;
+  outline: none;
 }
 
 #login-form.hidden {
