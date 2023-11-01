@@ -173,7 +173,7 @@ label {
 }
 
 #todo-list button {
-  font-size: 22px; /* 아이콘 크기 (원하는 크기로) 조절 */
+  font-size: 22px; /* 아이콘 크기 조절 (원하는 크기로 조절) */
 }
 
 #todo-list li{
@@ -186,4 +186,90 @@ label {
 
 #todo-list li {
   word-break: break-all; /* 글자가 요소의 경계를 넘어갈 때 줄 바꿈 수행 */
+}
+
+/* Add your CSS styles here */
+
+#show-hide-todo-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  position: absolute;
+  left: 0px;
+  font-size: 18px; /* 폰트 크기 키우기 */
+  cursor: pointer;
+  transition: opacity 0.3s; /* 투명도 효과 추가 */
+}
+
+#todo-form {
+  text-align: center;
+  margin: 10px;
+  position: relative;
+  margin-top: 10px;
+  display: flex; /* Todo 입력 칸과 "Todo:" 버튼을 가로로 나란히 배치 */
+  align-items: center;
+}
+
+#todo-input {
+  padding: 5px;
+  font-size: 16px;
+  border: none; /* 윤곽선 제거 */
+  outline: none; /* 아웃라인 제거 */
+  border-bottom: 1px solid #000; /* 밑줄 추가 */
+  right: 40px;
+  margin-left: 55px; /* 여기를 조절하여 오른쪽으로 이동할 거리를 조절 */
+}
+
+#todo-button {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#todo-list {
+  text-align: center;
+  margin: 10px;
+}
+
+#todo-label {
+  margin-right: 10px; /* 여기를 조절하여 옮길 거리를 조절 */
+}
+
+#todo-box {
+  display: none;
+  border: none;
+  padding: 10px;
+  margin: 10px auto;
+  width: 300px;
+  max-height: 200px;
+  overflow: auto; /* 스크롤을 표시합니다. */
+  position: absolute; /* 박스를 고정 위치로 배치 */
+  top: 40px; /* "Todo:" 버튼 아래에 배치 */
+  background-color: #fff; /* 검정 배경색 추가 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 음영 추가 */
+  border-radius: 10px; /* 꼭짓점을 둥글게 만듦 */
+  left: 15px;
+  transition: max-height 0.3s; /* max-height의 변경 시 애니메이션 추가 */
+}
+
+#todo-list {
+  word-wrap: break-word; /* 글자 길이가 박스를 벗어날 경우 줄바꿈을 활성화합니다. */
+  max-height: 190px; /* Todo가 없을 때 높이를 일정하게 유지 */
+  overflow-y: auto; /* Todo가 많아져도 스크롤로 보이게 함 */
+}
+
+#todo-list div {
+  margin: 5px 0;
+}
+
+#todo-list button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#show-hide-todo-button:hover {
+  opacity: 0.7; /* hover 시 투명도 효과 적용 */
 }
