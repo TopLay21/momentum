@@ -18,14 +18,12 @@
     </form>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
-    <div class="todo-container">
-      <div class="todo-form">
-        <form id="todo-form">
-          <label for="todo-input">todo: </label>
-          <input type="text" placeholder="Write a To Do and Press Enter" required>
-        </form>
-      </div>
-      <ul id="todo-list"></ul>
+    <div id="todo-form">
+      <input type="text" id="todo-input" placeholder="Write down about your todos" required>
+      <button id="show-hide-todo-button">Todo:</button>
+    </div>
+    <div id="todo-box">
+      <div id="todo-list"></div>
     </div>
     <div id="quote">
       <span id="quote-text"></span><br>
