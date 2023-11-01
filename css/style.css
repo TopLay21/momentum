@@ -242,7 +242,7 @@ label {
   margin: 10px auto;
   width: 300px;
   max-height: 200px;
-  overflow: auto; /* 스크롤을 표시합니다. */
+  overflow: hidden; /* 스크롤을 표시합니다. */
   position: absolute; /* 박스를 고정 위치로 배치 */
   top: 40px; /* "Todo:" 버튼 아래에 배치 */
   background-color: #fff; /* 검정 배경색 추가 */
