@@ -1,55 +1,79 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = toDoForm.querySelector("input");
-const toDoList = document.getElementById("todo-list");
+const todoInput = document.getElementById("todo-input");
+const showHideTodoButton = document.getElementById("show-hide-todo-button");
+const todoBox = document.getElementById("todo-box");
+const todoForm = document.getElementById("todo-form");
+const todoList = document.getElementById("todo-list");
 
-const TODOS_KEY = "todos";
+let todos = [];
+let isTodoBoxVisible = true;
 
-let toDos = [];
-
-function saveToDos(){
-    localStorage.setItem("todos", JSON.stringify(toDos));
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-function deleteToDo(event){
-    const li = event.target.parentElement;
-    li.remove();
-    //console.log(typeof li.id);
-    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
-    saveToDos();
-}
-
-function paintToDo(newTodo) {
-    const li = document.createElement("li");
-    li.id = newTodo.id;
-    const span = document.createElement("span");
-    span.innerText = newTodo.text;
-    const button = document.createElement("button");
-    button.innerText = "🆇"
-    button.addEventListener("click", deleteToDo);
-    li.appendChild(span);
-    li.appendChild(button);
-    toDoList.appendChild(li);
-}
-
-function handleToDoSubmit(event) {
-    event.preventDefault();
-    const newTodo = toDoInput.value;
-    toDoInput.value = "";
-    const newTodoObj = {
-        text: newTodo,
-        id: Date.now(),
+function toggleTodoBox() {
+    if (isTodoBoxVisible) {
+        todoBox.style.transition = "opacity 0.5s";
+        todoBox.style.opacity = 0;
+        setTimeout(() => {
+            todoBox.style.display = "none";
+            todoBox.style.transition = "";
+        }, 500);
+    } else {
+        todoBox.style.transition = "opacity 0.5s";
+        todoBox.style.display = "block";
+        setTimeout(() => {
+            todoBox.style.opacity = 1;
+        }, 100);
     }
-    toDos.push(newTodoObj);
-    paintToDo(newTodoObj);
-    saveToDos();
+    isTodoBoxVisible = !isTodoBoxVisible;
 }
 
-toDoForm.addEventListener("submit", handleToDoSubmit);
+function addTodo() {
+    const newTodo = todoInput.value;
+    if (newTodo.trim() === "") {
+        return;
+    }
 
-const savedToDos = localStorage.getItem(TODOS_KEY);
-console.log(savedToDos);
-if(savedToDos !== null){
-    const parsedToDos = JSON.parse(savedToDos);
-    toDos = parsedToDos;
-    parsedToDos.forEach(paintToDo);
+    todos.push(newTodo);
+    saveTodos();
+    todoInput.value = "";
+    displayTodos();
 }
+
+function removeTodo(index) {
+    todos.splice(index, 1);
+    saveTodos();
+    displayTodos();
+}
+
+function displayTodos() {
+    todoList.innerHTML = "";
+    todos.forEach((todo, index) => {
+        const todoItem = document.createElement("div");
+        todoItem.textContent = todo;
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "🆇";
+        removeButton.addEventListener("click", () => removeTodo(index));
+        todoItem.appendChild(removeButton);
+        todoList.appendChild(todoItem);
+    });
+}
+
+// Load todos from localStorage on page load
+const savedTodos = localStorage.getItem("todos");
+if (savedTodos) {
+    todos = JSON.parse(savedTodos);
+}
+
+// Handle real-time update of todos in the box
+setInterval(displayTodos, 1000);
+
+showHideTodoButton.addEventListener("click", toggleTodoBox);
+
+// Handle Enter key press for adding todos
+todoInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        addTodo();
+    }
+});
