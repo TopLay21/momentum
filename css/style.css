@@ -136,6 +136,13 @@ body {
 #todo-list {
   list-style-type: none;
   padding: 0;
+  text-align: center;
+  margin: 10px;
+  color:  #333;
+  word-break: break-all;
+  word-wrap: break-word; /* 글자 길이가 박스를 벗어날 경우 줄바꿈을 활성화합니다. */
+  max-height: 190px; /* Todo가 없을 때 높이를 일정하게 유지 */
+  overflow-y: auto; /* Todo가 많아져도 스크롤로 보이게 함 */
 }
 
 #todo-list li {
@@ -176,16 +183,8 @@ label {
   font-size: 22px; /* 아이콘 크기 조절 (원하는 크기로 조절) */
 }
 
-#todo-list li{
-  color:  #333;
-}
-
 #todo-list label{
   color: #333;
-}
-
-#todo-list li {
-  word-break: break-all; /* 글자가 요소의 경계를 넘어갈 때 줄 바꿈 수행 */
 }
 
 /* Add your CSS styles here */
@@ -226,11 +225,6 @@ label {
   font-size: 16px;
 }
 
-#todo-list {
-  text-align: center;
-  margin: 10px;
-}
-
 #todo-label {
   margin-right: 10px; /* 여기를 조절하여 옮길 거리를 조절 */
 }
@@ -250,12 +244,6 @@ label {
   border-radius: 10px; /* 꼭짓점을 둥글게 만듦 */
   left: 15px;
   transition: max-height 0.3s; /* max-height의 변경 시 애니메이션 추가 */
-}
-
-#todo-list {
-  word-wrap: break-word; /* 글자 길이가 박스를 벗어날 경우 줄바꿈을 활성화합니다. */
-  max-height: 190px; /* Todo가 없을 때 높이를 일정하게 유지 */
-  overflow-y: auto; /* Todo가 많아져도 스크롤로 보이게 함 */
 }
 
 #todo-list div {
