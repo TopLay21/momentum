@@ -1,0 +1,15 @@
+#weather {
+    position: absolute;
+    top: 20px; /* 원하는 위치로 조절 */
+    right: 20px; /* 원하는 위치로 조절 */
+    text-align: right;
+    font-size: 16px; /* 폰트 크기 설정 (원하는 크기로 조절) */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    color: white /* 폰트 색상 설정 (원하는 색상으로 조절) */
+  }
+  
+  #weather span {
+    display: block; /* 블록 레벨 요소로 표시하여 아래로 배치 */
+    margin-bottom: 5px; /* 각 요소 간의 간격 설정 (원하는 여백으로 조절) */
+    gap: 20px;
+  }

@@ -1,0 +1,23 @@
+#quote {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 요소를 가로로 중앙 정렬 */
+    text-align: center; /* 내부 텍스트를 가운데 정렬 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    color: white; /* 폰트 색상을 흰색으로 설정 */
+    font-size: 16px; /* 폰트 크기 설정 (예: 24px) */
+    font-family: Arial, sans-serif; /* 폰트 패밀리 설정 (예: Arial) */
+  }
+  
+  #quote-text {
+    line-height: 1.2; /* quote 텍스트의 줄 간격 설정 */
+    font-size: 24px; /* quote 텍스트의 글꼴 크기 설정 (선택 사항) */
+    font-weight: bold; /* quote 텍스트의 글꼴 두께 설정 (선택 사항) */
+  }
+  
+  #quote-author {
+    line-height: 1.2; /* author 텍스트의 줄 간격 설정 */
+    font-size: 18px; /* author 텍스트의 글꼴 크기 설정 (선택 사항) */
+  }
+  
