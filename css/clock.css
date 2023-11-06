@@ -1,0 +1,16 @@
+#clock {
+    position: absolute;
+    top: 35%; /* clock을 약간 위로 조정 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    #clock {
+      font-size: 100px;
+    }
+  }
