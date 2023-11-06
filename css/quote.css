@@ -21,3 +21,16 @@
     font-size: 18px; /* author 텍스트의 글꼴 크기 설정 (선택 사항) */
   }
   
+  @media (max-width: 768px) {
+    #quote {
+        font-size: 12px; /* 원하는 작은 글자 크기로 조절 */
+    }
+
+    #quote-text {
+        font-size: 18px; /* 원하는 작은 글자 크기로 조절 */
+    }
+
+    #quote-author {
+        font-size: 14px; /* 원하는 작은 글자 크기로 조절 */
+    }
+}
