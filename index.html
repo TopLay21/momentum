@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/todo.css">
     <link rel="stylesheet" href="css/merriweather.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
     <meta name="viewport" content="width=device-width">
     <title>MOMENTUM</title>
   </head>
@@ -30,6 +32,7 @@
         type="text" 
         id="todo-input" 
         placeholder="Write down about your todos"
+        autocomplete="off"
       >
       <button id="show-hide-todo-button">Todo:</button>
     </div>
@@ -49,6 +52,19 @@
       <div class='CurrTemp'></div>
       <div class='City'></div>
     </div>
+    <div class="search-container">
+      <form class="search">
+        <button class="search-button" type="submit" name="click" value="">
+          <i class="fas fa-search"></i>
+        </button>
+        <input class="keyword" type="text" name="search" maxlength="255" value="" autocomplete="off" placeholder="Search" required/>
+        <select class="SelectSearch" name="WhichSearch">
+          <option id="google" value="google">Google</option>
+          <option id="naver" value="naver">Naver</option>
+          <option id="bing" value="bing">Bing</option>
+        </select>
+      </form>    
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="js/greetings.js" charset="utf-8"></script>
     <script src="js/clock.js" charset="utf-8"></script>
@@ -56,5 +72,6 @@
     <script src="js/background.js" charset="utf-8"></script>
     <script src="js/todo.js" charset="utf-8"></script>
     <script src="js/merriweather.js" charset="utf-8"></script>
+    <script src="js/search.js" charset="utf-8"></script>
   </body>
 </html>
