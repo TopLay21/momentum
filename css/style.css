@@ -25,14 +25,3 @@ body {
   background-image: url('img/4.jpeg');
   background-image: url('img/5.jpg');
 }
-
-#clock {
-  position: absolute;
-  top: 35%; /* clock을 약간 위로 조정 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 120px;
-  font-weight: bold;
-  color: white;
-}
