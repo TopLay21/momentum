@@ -16,7 +16,8 @@
     <title>MOMENTUM</title>
   </head>
   <body>
-    <form class="hidden" id="login-form">
+    <form id="login-form">
+      <p class="welcome-sign">Welcome! What is your name?</p>
       <input 
       required 
       maxlength="15"
@@ -25,54 +26,58 @@
       >
       <button>Log In</button>
     </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="todo-form">
-      <input 
-        required 
-        type="text" 
-        id="todo-input" 
-        placeholder="Write down about your todos"
-        autocomplete="off"
-      >
-      <button id="show-hide-todo-button">Todo:</button>
+    <div class="hidden">
+      <h2 id="clock">00:00:00</h2>
+      <h1 id="greeting" class="hidden"></h1>
+      <div id="todo-form" style="text-align: right; margin-bottom: 10px;">
+        <button id="show-hide-todo-button" style="margin-right: 10px;">Todo:</button>
+        <input 
+          required 
+          type="text" 
+          id="todo-input" 
+          placeholder="Write down about your todos"
+          autocomplete="off"
+        >
+      </div>
+      <div id="todo-box">
+        <div id="todo-list"></div>
+      </div>
+      <div id="quote">
+        <span id="quote-text"></span><br>
+        <br><span id="quote-author"></span>
+      </div>
+      <!--<div id="weather">
+        <span></span>
+        <span></span>
+      </div>-->
+      <div class='weather'>
+        <div class='CurrIcon'></div>
+        <div class='CurrTemp'></div>
+        <div class='City'></div>
+      </div>
+      <div class="search-container">
+        <form class="search">
+          <button class="search-button" type="submit" name="click" value="">
+            <i class="fas fa-search"></i>
+          </button>
+          <input class="keyword" type="text" name="search" maxlength="255" value="" autocomplete="off" placeholder="Search" required/>
+          <select class="SelectSearch" name="WhichSearch">
+            <option id="google" value="google">Google</option>
+            <option id="naver" value="naver">Naver</option>
+            <option id="bing" value="bing">Bing</option>
+          </select>
+        </form>    
+      </div>
     </div>
-    <div id="todo-box">
-      <div id="todo-list"></div>
-    </div>
-    <div id="quote">
-      <span id="quote-text"></span><br>
-      <br><span id="quote-author"></span>
-    </div>
-    <!--<div id="weather">
-      <span></span>
-      <span></span>
-    </div>-->
-    <div class='weather'>
-      <div class='CurrIcon'></div>
-      <div class='CurrTemp'></div>
-      <div class='City'></div>
-    </div>
-    <div class="search-container">
-      <form class="search">
-        <button class="search-button" type="submit" name="click" value="">
-          <i class="fas fa-search"></i>
-        </button>
-        <input class="keyword" type="text" name="search" maxlength="255" value="" autocomplete="off" placeholder="Search" required/>
-        <select class="SelectSearch" name="WhichSearch">
-          <option id="google" value="google">Google</option>
-          <option id="naver" value="naver">Naver</option>
-          <option id="bing" value="bing">Bing</option>
-        </select>
-      </form>    
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="js/greetings.js" charset="utf-8"></script>
-    <script src="js/clock.js" charset="utf-8"></script>
-    <script src="js/quotes.js" charset="utf-8"></script>
-    <script src="js/background.js" charset="utf-8"></script>
-    <script src="js/todo.js" charset="utf-8"></script>
+    <script async src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!--<script src="js/greetings.js" charset="utf-8"></script>-->
+    <!--<script src="js/weather.js" charset="utf-8"></script>-->
+    <script async src="js/login.js" charset="utf-8"></script>
+    <script async src="js/clock.js" charset="utf-8"></script>
+    <script async src="js/quotes.js" charset="utf-8"></script>
+    <script async src="js/background.js" charset="utf-8"></script>
+    <script async src="js/todo.min.js" charset="utf-8"></script>
     <script src="js/merriweather.js" charset="utf-8"></script>
-    <script src="js/search.js" charset="utf-8"></script>
+    <script async src="js/search.js" charset="utf-8"></script>
   </body>
 </html>
