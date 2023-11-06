@@ -1,0 +1,59 @@
+button.search-button{
+    border: none;
+    background: transparent;
+    font-size: 1.125rem;
+}
+.fas{
+    color:white;
+}
+
+.keyword{
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    width: 150px;
+    color: white;
+    font-size: 1.063rem;
+    font-style: "Helvetica";
+    opacity: 0;
+    transition: 0.4s;
+}
+
+select{
+    border: none;
+    outline: none;
+    width: 80px;
+    font-size: 1.125rem;
+    font-weight: 200;
+    background: transparent;
+    color: white;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+select option{
+    background-color: black;
+}
+
+.search:hover > .keyword{
+    opacity: 1;
+}
+
+.search:hover > select{
+    opacity: 1;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 높이의 100%로 중앙에 배치합니다. */
+  }
+
+.search-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px; /* 원하는 여백을 설정하세요 */
+  }
