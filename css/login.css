@@ -10,6 +10,10 @@
     outline: none;
   }
   
+  .welcome-sign {
+    font-size: 80px;
+  }
+
   #login-form.hidden {
     display: none; /* hidden 클래스가 적용된 경우 폼 숨김 */
   }
@@ -24,6 +28,7 @@
     font-weight: bold; /* 폰트 두껍게 설정 */
     cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 상태로 표시 */
     transition: background-color 0.3s; /* 배경 색상 변경에 애니메이션 적용 */
+    z-index: 2;
   }
   
   /* 버튼에 호버 (마우스 오버) 효과 */
@@ -41,3 +46,30 @@
     font-weight: bold;
     color: white;
   }
+  
+/* CSS 스타일과 애니메이션을 정의합니다. */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
