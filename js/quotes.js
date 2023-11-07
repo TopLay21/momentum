@@ -1,4 +1,5 @@
 const quotes = [
+    //기존에 있었던 명언들
     {
         quote: "Whatever the mind of man can conceive and believe, it can achieve.",
         author: "Napoleon Hill",
@@ -42,6 +43,43 @@ const quotes = [
     {
         quote: "You will face many defeats in life, but never let yourself be defeated.",
         author: "Maya Angelou",
+    },
+    //새로 추가되는 명언들
+    {
+        quote: "A man may die, nations may rise and fall, but an idea lives on",
+        author: "John F. Kennedy",
+    },
+    {
+        quote: "It is better to fail in originality than to succeed in imitation.",
+        author: "Herman Melville",
+    },
+    {
+        quote: "The road to success and the road to failure are almost exactly the same.",
+        author: "Colin R. Davis",
+    },
+    {
+        quote: "Always remember, your focus determines your reality.",
+        author: "George Lucas",
+    },
+    {
+        quote: "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.",
+        author: "James Cameron",
+    },
+    {
+        quote: "Before anything else, preparation is the key to success.",
+        author: "Alexander Graham Bell",
+    },
+    {
+        quote: "Believe you can and you're halfway there.",
+        author: "Theodore Roosevelt",
+    },
+    {
+        quote: "I alone cannot change the world, but I can cast a stone across the water to create many ripples.",
+        author: "Mother Teresa",
+    },
+    {
+        quote: "I would rather die of passion than of boredom.",
+        author: "Vincent van Gogh",
     }
 ]
 
