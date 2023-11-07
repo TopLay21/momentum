@@ -1,4 +1,4 @@
-const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpg", "6.jpg", "7.png", "8.jpg", "9.jpg"];
+const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.webp", "5.jpg", "6.jpg", "7.png", "8.jpg", "9.jpg"];
 const preloadedImages = [];
 
 for (const imageSrc of images) {
