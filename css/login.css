@@ -1,6 +1,6 @@
 #login-form {
     position: absolute;
-    top: 60%; /* 중앙에 배치 */
+    top: 50%; /* 중앙에 배치 */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
